@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styles from './app.module.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Hellow World!</h1>
+      <h2>Bem-vindos</h2>
+
+      <form>
+  <div className={styles.form_group}>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+    <small id="emailHelp" cla="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div className={styles.form_group}>
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" cla="form-control" id="exampleInputPassword1" placeholder="Password"/>
+  </div>
+  <div className={styles.form_group}>
+  </div>
+  <button type="submit" cla="btn btn-primary">Submit</button>
+</form>
     </>
   )
 }
